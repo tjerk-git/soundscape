@@ -2,7 +2,7 @@ var $ = jQuery.noConflict();
 
 $(document).ready((function(e) {
 // The item (or items) to press and hold on
-let dragItem = document.querySelector("#item");
+let dragItem = document.querySelector("#ball");
 let container = document.querySelector("#container");
 let timePressed = 0;
 let press = false;
@@ -36,7 +36,10 @@ function scaleItem() {
 	let size = 1 + timePressed / 50;
 	if (size > 15) {
 		size = 15;
-		container.classList.add("stripes");
+		//container.classList.add("stripes");
+		// animation done
+		$('.recording').show();
+		$('#ball').hide();
 	}
 	dragItem.style.transitionDuration = "0s";
 	dragItem.style.setProperty("--scale-value", size);
