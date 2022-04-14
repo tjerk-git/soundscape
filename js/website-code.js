@@ -15,6 +15,8 @@ function counter() {
 	if (press) {
 		timePressed++;
 		scaleItem();
+		
+		$("#counter").text(timePressed);
 	} else {
 		//timePressed = 0;
 		
